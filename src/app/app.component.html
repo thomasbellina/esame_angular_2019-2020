@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit(insert.value)" >
+  <h2>toDoList</h2>
+    <input 
+      class="input"
+      type="text" 
+      name="testo" 
+      id=""
+      [(ngModel)]="model.insert"
+      name="insert"
+      #insert
+    >
+
+    <input type="submit" value="go?" id="submit">
+
+    <ul>
+      <li *ngFor="let insert of instertions">
+        <p>{{insert}}</p>
+        <input type="checkbox" class="checkbox" />
+      </li>
+    </ul>
+</form>
